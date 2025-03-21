@@ -1,0 +1,592 @@
+<?xml version="1.0"?>
+<project name="SVENG202409072200R04 EEE Reserva dos Ip&#xEA;s" company="BJNOBRE Engenharia" manager="Bene" phase="" project-start="20250224T000000Z" mrproject-version="2" calendar="1">
+  <properties>
+    <property name="Limite" type="text" owner="project" label="Limite" description="Data limite para entrega do projeto"/>
+  </properties>
+  <properties>
+    <property name="Limite" value="24/06/2025"/>
+  </properties>
+  <phases/>
+  <calendars>
+    <day-types>
+      <day-type id="0" name="&#xDA;til" description="Um dia &#xFA;til padr&#xE3;o"/>
+      <day-type id="1" name="N&#xE3;o &#xFA;til" description="Um dia n&#xE3;o &#xFA;til padr&#xE3;o"/>
+      <day-type id="2" name="Utiliza base" description="Utiliza o dia a partir de um calend&#xE1;rio base"/>
+    </day-types>
+    <calendar id="1" name="Padr&#xE3;o">
+      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="1"/>
+      <overridden-day-types>
+        <overridden-day-type id="0">
+          <interval start="0800" end="1200"/>
+          <interval start="1300" end="1700"/>
+        </overridden-day-type>
+      </overridden-day-types>
+      <days>
+        <day date="20260203" type="day-type" id="1"/>
+        <day date="20250304" type="day-type" id="1"/>
+        <day date="20260202" type="day-type" id="1"/>
+        <day date="20250303" type="day-type" id="1"/>
+      </days>
+    </calendar>
+  </calendars>
+  <tasks>
+    <task id="1" name="GERAL" note="Data limite para entrega da obra: 24/06/2025" work="108000" duration="432000" start="20250224T000000Z" end="20250318T170000Z" work-start="20250224T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="2" name="Contrata&#xE7;&#xE3;o" note="" work="3600" duration="28800" start="20250224T000000Z" end="20250224T170000Z" work-start="20250224T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="3" name="Assinatura contrato" note="" work="3600" duration="28800" start="20250224T000000Z" end="20250224T170000Z" work-start="20250224T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-duration"/>
+      </task>
+      <task id="4" name="Financeiro" note="" work="3600" duration="403200" start="20250224T170000Z" end="20250318T170000Z" work-start="20250225T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="5" name="Emiss&#xE3;o da NF0" note="qui 27 fev 2025, 10:27 &gt; NFSe 033 53130537000132 - GT003_MED_INICIAL" work="3600" duration="28800" start="20250224T170000Z" end="20250225T170000Z" work-start="20250225T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-duration">
+          <predecessors>
+            <predecessor id="1" predecessor-id="3" type="FS"/>
+          </predecessors>
+        </task>
+        <task id="6" name="Recebimento NF0" note="" work="0" duration="0" start="20250318T170000Z" end="20250318T170000Z" work-start="20250318T170000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="5" type="FS" lag="1814400"/>
+          </predecessors>
+        </task>
+      </task>
+      <task id="7" name="Mobiliza&#xE7;&#xE3;o/Desmob" note="" work="64800" duration="57600" start="20250227T000000Z" end="20250228T170000Z" work-start="20250227T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="2" type="FS" lag="86400"/>
+        </predecessors>
+        <task id="8" name="Instalar canteiro de obras" note="" work="57600" duration="19200" start="20250227T000000Z" end="20250227T142000Z" work-start="20250227T080000Z" percent-complete="75" priority="0" type="normal" scheduling="fixed-work">
+          <constraint type="start-no-earlier-than" time="20250227T000000Z"/>
+        </task>
+        <task id="9" name="Locar gerador" note="" work="7200" duration="28800" start="20250228T000000Z" end="20250228T170000Z" work-start="20250228T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-duration">
+          <constraint type="start-no-earlier-than" time="20250228T000000Z"/>
+        </task>
+      </task>
+      <task id="10" name="Aquisi&#xE7;&#xF5;es" note="" work="36000" duration="86400" start="20250225T170000Z" end="20250301T170000Z" work-start="20250226T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="2" type="FS" lag="86400"/>
+        </predecessors>
+        <task id="11" name="Outras" note="" work="36000" duration="86400" start="20250225T170000Z" end="20250301T170000Z" work-start="20250226T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <task id="12" name="Insumos concreto manual" note="" work="7200" duration="86400" start="20250225T170000Z" end="20250301T170000Z" work-start="20250226T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <task id="13" name="Comprar madeiramento" note="" work="7200" duration="57600" start="20250225T170000Z" end="20250227T170000Z" work-start="20250226T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
+            <task id="14" name="Receber madeiramento" note="" work="0" duration="0" start="20250301T170000Z" end="20250301T170000Z" work-start="20250305T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+              <predecessors>
+                <predecessor id="1" predecessor-id="13" type="FS" lag="172800"/>
+              </predecessors>
+            </task>
+          </task>
+          <task id="15" name="Materiais abrigos" note="" work="28800" duration="28800" start="20250225T170000Z" end="20250226T170000Z" work-start="20250226T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        </task>
+      </task>
+    </task>
+    <task id="16" name="CIVIL" note="" work="1947600" duration="1227600" start="20250301T000000Z" end="20250502T140000Z" work-start="20250305T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="2" type="FS" lag="86400"/>
+      </predecessors>
+      <task id="17" name="Prepara&#xE7;&#xE3;o" note="" work="144000" duration="864000" start="20250301T000000Z" end="20250415T170000Z" work-start="20250305T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="18" name="Drenar po&#xE7;o" note="" work="115200" duration="864000" start="20250301T000000Z" end="20250415T170000Z" work-start="20250305T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+          <constraint type="start-no-earlier-than" time="20250301T000000Z"/>
+        </task>
+        <task id="19" name="Locar estruturas com top&#xF3;grafo cliente" note="" work="28800" duration="28800" start="20250305T000000Z" end="20250305T170000Z" work-start="20250305T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+          <constraint type="must-start-on" time="20250305T000000Z"/>
+        </task>
+        <task id="20" name="[descartada] Contencionamento" note="" work="0" duration="0" start="20250303T000000Z" end="20250305T080000Z" work-start="20250305T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <task id="21" name="Materiais" note="" work="0" duration="0" start="20250303T000000Z" end="20250305T080000Z" work-start="20250305T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <task id="22" name="Comprar" note="" work="0" duration="0" start="20250303T000000Z" end="20250305T080000Z" work-start="20250305T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+              <predecessors>
+                <predecessor id="1" predecessor-id="18" type="SS" lag="172800"/>
+              </predecessors>
+            </task>
+            <task id="23" name="Receber" note="" work="0" duration="0" start="20250305T080000Z" end="20250305T080000Z" work-start="20250305T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+              <constraint type="start-no-earlier-than" time="20250305T000000Z"/>
+              <predecessors>
+                <predecessor id="1" predecessor-id="22" type="FS"/>
+              </predecessors>
+            </task>
+          </task>
+          <task id="24" name="Fazer conten&#xE7;&#xE3;o em madeira" note="" work="0" duration="0" start="20250305T080000Z" end="20250305T080000Z" work-start="20250305T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <predecessors>
+              <predecessor id="1" predecessor-id="23" type="FS"/>
+              <predecessor id="1" predecessor-id="18" type="SS" lag="86400"/>
+            </predecessors>
+          </task>
+        </task>
+      </task>
+      <task id="25" name="Po&#xE7;o 7m" note="" work="763200" duration="421200" start="20250301T000000Z" end="20250325T140000Z" work-start="20250305T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="26" name="Insumos" note="" work="7200" duration="86400" start="20250305T000000Z" end="20250309T170000Z" work-start="20250305T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <task id="27" name="Comprar" note="* Rach&#xE3;o [3x3x0,5=4,5m&#xB3;] / &#10;* Concreto 40mPA [2,5x2,5x0,2=1,5m&#xB3;] / &#10;* T&#xE1;bua 4x 3m x 30cm x 3cm / &#10;* 2kg Pregos [] / &#10;* 1kg Arame recozido / " work="7200" duration="57600" start="20250305T000000Z" end="20250306T170000Z" work-start="20250305T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+            <constraint type="start-no-earlier-than" time="20250305T000000Z"/>
+          </task>
+          <task id="28" name="Receber" note="Concreto 30mPA / &#10;Carga de pedra rach&#xE3;o" work="0" duration="0" start="20250309T170000Z" end="20250309T170000Z" work-start="20250310T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+            <constraint type="start-no-earlier-than" time="20250305T000000Z"/>
+            <predecessors>
+              <predecessor id="1" predecessor-id="27" type="FS" lag="259200"/>
+            </predecessors>
+          </task>
+        </task>
+        <task id="29" name="Limpar &#xE1;rea de constru&#xE7;&#xE3;o" note="" work="115200" duration="57600" start="20250306T000000Z" end="20250307T170000Z" work-start="20250306T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+          <constraint type="start-no-earlier-than" time="20250306T000000Z"/>
+        </task>
+        <task id="30" name="Radier po&#xE7;o 7m" note="" work="86400" duration="75600" start="20250309T170000Z" end="20250312T140000Z" work-start="20250310T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <task id="31" name="Lan&#xE7;ar pedra rach&#xE3;o" note="" work="28800" duration="28800" start="20250309T170000Z" end="20250310T170000Z" work-start="20250310T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+            <predecessors>
+              <predecessor id="1" predecessor-id="29" type="FS"/>
+              <predecessor id="1" predecessor-id="26" type="FS"/>
+            </predecessors>
+          </task>
+          <task id="32" name="Locar malha radier po&#xE7;o 7m" note="T&#xE1;buas para limitar bloco de concreto" work="28800" duration="28800" start="20250310T170000Z" end="20250311T170000Z" work-start="20250311T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+            <predecessors>
+              <predecessor id="1" predecessor-id="31" type="FS"/>
+            </predecessors>
+          </task>
+          <task id="33" name="Concretar radier po&#xE7;o 7m" note="" work="28800" duration="18000" start="20250311T170000Z" end="20250312T140000Z" work-start="20250312T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <predecessors>
+              <predecessor id="1" predecessor-id="26" type="FS"/>
+              <predecessor id="1" predecessor-id="32" type="FS"/>
+            </predecessors>
+          </task>
+        </task>
+        <task id="34" name="Aduelas" note="" work="266400" duration="421200" start="20250301T000000Z" end="20250325T140000Z" work-start="20250305T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <task id="35" name="Marcar trincas nas aduelas" note="" work="7200" duration="7200" start="20250305T000000Z" end="20250305T100000Z" work-start="20250305T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <constraint type="start-no-earlier-than" time="20250305T000000Z"/>
+          </task>
+          <task id="36" name="Limpar" note="" work="28800" duration="57600" start="20250301T000000Z" end="20250306T170000Z" work-start="20250305T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+            <constraint type="start-no-earlier-than" time="20250301T000000Z"/>
+          </task>
+          <task id="37" name="Impermeabilizar [externo]" note="" work="57600" duration="86400" start="20250305T000000Z" end="20250307T170000Z" work-start="20250305T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+            <constraint type="start-no-earlier-than" time="20250305T000000Z"/>
+          </task>
+          <task id="38" name="Instalar" note="" work="86400" duration="28800" start="20250319T140000Z" end="20250320T140000Z" work-start="20250319T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+            <predecessors>
+              <predecessor id="1" predecessor-id="33" type="FS" lag="604800"/>
+              <predecessor id="1" predecessor-id="37" type="FS"/>
+            </predecessors>
+          </task>
+          <task id="39" name="Vedar jun&#xE7;&#xF5;es" note="" work="28800" duration="28800" start="20250320T140000Z" end="20250321T140000Z" work-start="20250320T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <predecessors>
+              <predecessor id="1" predecessor-id="38" type="FS"/>
+            </predecessors>
+          </task>
+          <task id="40" name="Imperm. [interno]" note="" work="57600" duration="57600" start="20250321T140000Z" end="20250325T140000Z" work-start="20250321T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <predecessors>
+              <predecessor id="1" predecessor-id="39" type="FS"/>
+            </predecessors>
+          </task>
+        </task>
+        <task id="41" name="Aterrar fosso [primeiro metro]" note="" work="288000" duration="144000" start="20250313T140000Z" end="20250320T140000Z" work-start="20250313T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="37" type="FS" lag="86400"/>
+            <predecessor id="1" predecessor-id="33" type="FS" lag="86400"/>
+          </predecessors>
+        </task>
+      </task>
+      <task id="42" name="Po&#xE7;o 5m e reservat&#xF3;rios emerg&#xEA;ncia" note="" work="608400" duration="547200" start="20250320T140000Z" end="20250416T140000Z" work-start="20250320T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="38" type="FS"/>
+        </predecessors>
+        <task id="43" name="Insumos" note="" work="28800" duration="57600" start="20250320T140000Z" end="20250324T140000Z" work-start="20250320T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <task id="44" name="Comprar" note="" work="28800" duration="28800" start="20250320T140000Z" end="20250321T140000Z" work-start="20250320T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+          <task id="45" name="Receber" note="" work="0" duration="0" start="20250324T140000Z" end="20250324T140000Z" work-start="20250324T140000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+            <predecessors>
+              <predecessor id="1" predecessor-id="44" type="FS" lag="259200"/>
+            </predecessors>
+          </task>
+        </task>
+        <task id="46" name="Radier reservat&#xF3;rios" note="" work="115200" duration="115200" start="20250324T140000Z" end="20250328T140000Z" work-start="20250324T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="41" type="FS"/>
+            <predecessor id="1" predecessor-id="43" type="FS"/>
+          </predecessors>
+          <task id="47" name="Lan&#xE7;ar pedra rach&#xE3;o" note="" work="57600" duration="57600" start="20250324T140000Z" end="20250326T140000Z" work-start="20250324T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
+          <task id="48" name="Locar malha rediers" note="" work="28800" duration="28800" start="20250326T140000Z" end="20250327T140000Z" work-start="20250326T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+            <predecessors>
+              <predecessor id="1" predecessor-id="47" type="FS"/>
+            </predecessors>
+          </task>
+          <task id="49" name="Concretar radiers" note="" work="28800" duration="28800" start="20250327T140000Z" end="20250328T140000Z" work-start="20250327T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <predecessors>
+              <predecessor id="1" predecessor-id="48" type="FS"/>
+            </predecessors>
+          </task>
+        </task>
+        <task id="50" name="Aduelas" note="" work="435600" duration="547200" start="20250320T140000Z" end="20250416T140000Z" work-start="20250320T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <task id="51" name="Prepara&#xE7;&#xE3;o" note="" work="172800" duration="172800" start="20250320T140000Z" end="20250328T140000Z" work-start="20250320T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+            <task id="52" name="Limpar" note="" work="57600" duration="57600" start="20250320T140000Z" end="20250324T140000Z" work-start="20250320T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
+            <task id="53" name="Furar aduelas para trava das bonecas" note="" work="115200" duration="115200" start="20250324T140000Z" end="20250328T140000Z" work-start="20250324T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+              <predecessors>
+                <predecessor id="1" predecessor-id="52" type="FS"/>
+              </predecessors>
+            </task>
+          </task>
+          <task id="54" name="Impermeabilizar [externo]" note="" work="57600" duration="57600" start="20250328T140000Z" end="20250401T140000Z" work-start="20250328T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+            <predecessors>
+              <predecessor id="1" predecessor-id="51" type="FS"/>
+            </predecessors>
+          </task>
+          <task id="55" name="Instalar" note="" work="28800" duration="28800" start="20250401T140000Z" end="20250402T140000Z" work-start="20250401T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+            <predecessors>
+              <predecessor id="1" predecessor-id="46" type="FS"/>
+              <predecessor id="1" predecessor-id="54" type="FS"/>
+            </predecessors>
+          </task>
+          <task id="56" name="Bonecas aduelas de 2,5m" note="" work="118800" duration="460800" start="20250320T140000Z" end="20250411T140000Z" work-start="20250320T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <task id="57" name="Materiais" note="" work="3600" duration="115200" start="20250320T140000Z" end="20250326T140000Z" work-start="20250320T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+              <task id="58" name="Comprar" note="" work="3600" duration="57600" start="20250320T140000Z" end="20250324T140000Z" work-start="20250320T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
+              <task id="59" name="Receber" note="" work="0" duration="0" start="20250326T140000Z" end="20250326T140000Z" work-start="20250326T140000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+                <predecessors>
+                  <predecessor id="1" predecessor-id="58" type="FS" lag="172800"/>
+                </predecessors>
+              </task>
+            </task>
+            <task id="60" name="Montar caixaria" note="" work="57600" duration="57600" start="20250403T140000Z" end="20250407T140000Z" work-start="20250403T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+              <predecessors>
+                <predecessor id="1" predecessor-id="55" type="FS" lag="86400"/>
+                <predecessor id="1" predecessor-id="57" type="FS"/>
+              </predecessors>
+            </task>
+            <task id="61" name="Concretar bonecas" note="" work="28800" duration="28800" start="20250407T140000Z" end="20250408T140000Z" work-start="20250407T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+              <predecessors>
+                <predecessor id="1" predecessor-id="60" type="FS"/>
+              </predecessors>
+            </task>
+            <task id="62" name="Remover caixaria" note="" work="28800" duration="28800" start="20250410T140000Z" end="20250411T140000Z" work-start="20250410T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+              <predecessors>
+                <predecessor id="1" predecessor-id="61" type="FS" lag="172800"/>
+              </predecessors>
+            </task>
+          </task>
+          <task id="63" name="Vedar jun&#xE7;&#xF5;es" note="" work="28800" duration="57600" start="20250411T140000Z" end="20250415T140000Z" work-start="20250411T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+            <predecessors>
+              <predecessor id="1" predecessor-id="56" type="FS"/>
+            </predecessors>
+          </task>
+          <task id="64" name="Imperm. [interno]" note="" work="28800" duration="28800" start="20250415T140000Z" end="20250416T140000Z" work-start="20250415T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <predecessors>
+              <predecessor id="1" predecessor-id="63" type="FS"/>
+            </predecessors>
+          </task>
+        </task>
+        <task id="65" name="Aterrar fosso" note="" work="28800" duration="288000" start="20250402T140000Z" end="20250416T140000Z" work-start="20250402T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+          <predecessors>
+            <predecessor id="1" predecessor-id="54" type="FS" lag="86400"/>
+          </predecessors>
+        </task>
+      </task>
+      <task id="66" name="Tampas reservat&#xF3;rios" note="" work="115200" duration="345600" start="20250416T140000Z" end="20250502T140000Z" work-start="20250416T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="42" type="FS"/>
+          <predecessor id="1" predecessor-id="25" type="FS"/>
+        </predecessors>
+        <task id="67" name="Montar estruturas tampas" note="" work="57600" duration="57600" start="20250416T140000Z" end="20250418T140000Z" work-start="20250416T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="68" name="Concretar tampas" note="" work="28800" duration="28800" start="20250418T140000Z" end="20250421T140000Z" work-start="20250418T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="67" type="FS"/>
+          </predecessors>
+        </task>
+        <task id="69" name="Instalar tampas" note="" work="28800" duration="28800" start="20250501T140000Z" end="20250502T140000Z" work-start="20250501T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="68" type="FS" lag="864000"/>
+          </predecessors>
+        </task>
+      </task>
+      <task id="70" name="Terreno" note="" work="28800" duration="28800" start="20250402T140000Z" end="20250403T140000Z" work-start="20250402T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="55" type="FS"/>
+        </predecessors>
+        <task id="71" name="Aterrar terreno" note="" work="28800" duration="28800" start="20250402T140000Z" end="20250403T140000Z" work-start="20250402T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      </task>
+      <task id="72" name="Abrigo pain&#xE9;is e gerador" note="" work="288000" duration="358800" start="20250403T140000Z" end="20250422T084000Z" work-start="20250403T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="70" type="FS"/>
+        </predecessors>
+        <task id="73" name="Elaborar desenhos" note="" work="28800" duration="7200" start="20250403T140000Z" end="20250403T160000Z" work-start="20250403T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
+        <task id="74" name="Listar materiais" note="" work="7200" duration="28800" start="20250404T160000Z" end="20250407T160000Z" work-start="20250404T160000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+          <predecessors>
+            <predecessor id="1" predecessor-id="73" type="FS" lag="86400"/>
+          </predecessors>
+        </task>
+        <task id="75" name="Construir abrigos" note="" work="252000" duration="294000" start="20250407T160000Z" end="20250422T084000Z" work-start="20250407T160000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+          <predecessors>
+            <predecessor id="1" predecessor-id="74" type="FS"/>
+          </predecessors>
+          <task id="76" name="Preparar terreno" note="" work="14400" duration="28800" start="20250407T160000Z" end="20250408T160000Z" work-start="20250407T160000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+          <task id="77" name="Construir radier e baldrames" note="" work="86400" duration="87300" start="20250408T160000Z" end="20250411T161320Z" work-start="20250408T160000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <predecessors>
+              <predecessor id="1" predecessor-id="76" type="FS"/>
+            </predecessors>
+          </task>
+          <task id="78" name="Construir paredes" note="" work="57600" duration="57600" start="20250413T161320Z" end="20250415T170000Z" work-start="20250414T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+            <predecessors>
+              <predecessor id="1" predecessor-id="77" type="FS" lag="172800"/>
+            </predecessors>
+          </task>
+          <task id="79" name="Rebocar" note="" work="28800" duration="28800" start="20250415T170000Z" end="20250416T170000Z" work-start="20250416T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <predecessors>
+              <predecessor id="1" predecessor-id="78" type="FS"/>
+            </predecessors>
+          </task>
+          <task id="80" name="Construir laje de cobertura" note="Laje ser&#xE1; constru&#xED;da fora depois instalada sobre a alvenaria" work="28800" duration="28800" start="20250407T160000Z" end="20250408T160000Z" work-start="20250407T160000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+          <task id="81" name="Instalar laje de cobertura" note="" work="7200" duration="2400" start="20250418T170000Z" end="20250421T084000Z" work-start="20250421T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <predecessors>
+              <predecessor id="1" predecessor-id="79" type="FS" lag="172800"/>
+              <predecessor id="1" predecessor-id="80" type="FS" lag="864000"/>
+            </predecessors>
+          </task>
+          <task id="82" name="Pintar" note="" work="28800" duration="28800" start="20250421T084000Z" end="20250422T084000Z" work-start="20250421T084000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <predecessors>
+              <predecessor id="1" predecessor-id="81" type="FS"/>
+            </predecessors>
+          </task>
+        </task>
+      </task>
+    </task>
+    <task id="83" name="HIDR&#xC1;ULICA" note="" work="705600" duration="1440000" start="20250306T170000Z" end="20250515T170000Z" work-start="20250307T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="2" type="FS" lag="86400"/>
+      </predecessors>
+      <task id="84" name="Revisar mat. hidr&#xE1;ulico" note="" work="28800" duration="28800" start="20250402T140000Z" end="20250403T140000Z" work-start="20250402T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="55" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="85" name="Mat. hidr&#xE1;ulico" note="" work="7200" duration="288000" start="20250403T140000Z" end="20250417T140000Z" work-start="20250403T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="84" type="FS"/>
+        </predecessors>
+        <task id="86" name="Comprar" note="" work="7200" duration="57600" start="20250403T140000Z" end="20250407T140000Z" work-start="20250403T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
+        <task id="87" name="Receber" note="" work="0" duration="0" start="20250417T140000Z" end="20250417T140000Z" work-start="20250417T140000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="86" type="FS" lag="864000"/>
+          </predecessors>
+        </task>
+      </task>
+      <task id="88" name="Instalar tubula&#xE7;&#xF5;es e v&#xE1;lvulas" note="" work="288000" duration="288000" start="20250417T140000Z" end="20250501T140000Z" work-start="20250417T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="85" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="89" name="Instalar comportas" note="" work="144000" duration="144000" start="20250417T140000Z" end="20250424T140000Z" work-start="20250417T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="85" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="90" name="Bombas d'&#xE1;gua" note="" work="7200" duration="1324800" start="20250306T170000Z" end="20250509T170000Z" work-start="20250307T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="91" name="Comprar" note="" work="7200" duration="57600" start="20250306T170000Z" end="20250310T170000Z" work-start="20250307T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+          <predecessors>
+            <predecessor id="1" predecessor-id="2" type="FS" lag="864000"/>
+          </predecessors>
+        </task>
+        <task id="92" name="Receber" note="" work="0" duration="0" start="20250509T170000Z" end="20250509T170000Z" work-start="20250509T170000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="91" type="FS" lag="5184000"/>
+          </predecessors>
+        </task>
+      </task>
+      <task id="93" name="Instalar bombas" note="" work="230400" duration="115200" start="20250509T170000Z" end="20250515T170000Z" work-start="20250512T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="92" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="94" name="EL&#xC9;TRICA" note="" work="1072800" duration="1411200" start="20250310T000000Z" end="20250515T170000Z" work-start="20250310T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="2" type="FS" lag="86400"/>
+      </predecessors>
+      <task id="95" name="Pain&#xE9;is el&#xE9;tricos" note="" work="612000" duration="864000" start="20250310T000000Z" end="20250418T170000Z" work-start="20250310T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="96" name="Revisar projeto e listar materiais" note="" work="28800" duration="28800" start="20250310T000000Z" end="20250310T170000Z" work-start="20250310T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <constraint type="start-no-earlier-than" time="20250310T000000Z"/>
+        </task>
+        <task id="97" name="Mat. el&#xE9;trico [pain&#xE9;is]" note="" work="7200" duration="259200" start="20250310T170000Z" end="20250322T170000Z" work-start="20250311T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="96" type="FS"/>
+          </predecessors>
+          <task id="98" name="Comprar" note="" work="7200" duration="57600" start="20250310T170000Z" end="20250312T170000Z" work-start="20250311T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
+          <task id="99" name="Receber" note="" work="0" duration="0" start="20250322T170000Z" end="20250322T170000Z" work-start="20250324T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+            <predecessors>
+              <predecessor id="1" predecessor-id="98" type="FS" lag="864000"/>
+            </predecessors>
+          </task>
+        </task>
+        <task id="100" name="Montar pain&#xE9;is el&#xE9;tricos" note="" work="576000" duration="576000" start="20250322T170000Z" end="20250418T170000Z" work-start="20250324T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="97" type="FS"/>
+          </predecessors>
+        </task>
+      </task>
+      <task id="101" name="Infra-estrutura" note="" work="460800" duration="979200" start="20250331T000000Z" end="20250515T170000Z" work-start="20250331T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="102" name="Revisar projeto e listar materiais" note="" work="14400" duration="57600" start="20250331T000000Z" end="20250401T170000Z" work-start="20250331T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+          <constraint type="start-no-earlier-than" time="20250331T000000Z"/>
+        </task>
+        <task id="103" name="Mat. el&#xE9;trico [infra]" note="" work="14400" duration="172800" start="20250401T170000Z" end="20250409T170000Z" work-start="20250402T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <task id="104" name="Comprar" note="Pain&#xE9;is / &#10;Cabeamento / &#10;Boias / &#10;Padr&#xE3;o / &#10;Ilumina&#xE7;&#xE3;o" work="14400" duration="86400" start="20250401T170000Z" end="20250404T170000Z" work-start="20250402T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+            <predecessors>
+              <predecessor id="1" predecessor-id="102" type="FS"/>
+            </predecessors>
+          </task>
+          <task id="105" name="Receber padr&#xE3;o" note="" work="0" duration="0" start="20250406T170000Z" end="20250406T170000Z" work-start="20250407T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+            <predecessors>
+              <predecessor id="1" predecessor-id="104" type="FS" lag="172800"/>
+            </predecessors>
+          </task>
+          <task id="106" name="Receber infra" note="" work="0" duration="0" start="20250409T170000Z" end="20250409T170000Z" work-start="20250409T170000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+            <predecessors>
+              <predecessor id="1" predecessor-id="104" type="FS" lag="432000"/>
+            </predecessors>
+          </task>
+        </task>
+        <task id="107" name="Instalar padr&#xE3;o" note="" work="57600" duration="28800" start="20250406T170000Z" end="20250407T170000Z" work-start="20250407T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="105" type="FS"/>
+          </predecessors>
+        </task>
+        <task id="108" name="Pedir liga&#xE7;&#xE3;o nova Energisa" note="" work="0" duration="0" start="20250408T170000Z" end="20250408T170000Z" work-start="20250408T170000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="107" type="FS" lag="86400"/>
+          </predecessors>
+        </task>
+        <task id="109" name="Instalar componentes" note="Boias / &#10;Lumin&#xE1;rias em poste / &#10;&#10;" work="201600" duration="201600" start="20250422T084000Z" end="20250501T084000Z" work-start="20250422T084000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="75" type="FS"/>
+            <predecessor id="1" predecessor-id="100" type="FS"/>
+          </predecessors>
+        </task>
+        <task id="110" name="Instalar Bombas" note="" work="115200" duration="115200" start="20250510T170000Z" end="20250515T170000Z" work-start="20250512T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="90" type="FS" lag="86400"/>
+          </predecessors>
+        </task>
+        <task id="111" name="Ilumina&#xE7;&#xE3;o e tomadas" note="" work="57600" duration="28800" start="20250501T084000Z" end="20250502T084000Z" work-start="20250501T084000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="109" type="FS"/>
+          </predecessors>
+        </task>
+      </task>
+    </task>
+    <task id="112" name="COMISSIONAMENTO" note="" work="115200" duration="57600" start="20250517T170000Z" end="20250520T170000Z" work-start="20250519T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="113" name="Testar circuito hidr&#xE1;ulico" note="" work="57600" duration="57600" start="20250517T170000Z" end="20250520T170000Z" work-start="20250519T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="83" type="FS" lag="172800"/>
+        </predecessors>
+      </task>
+      <task id="114" name="Testar el&#xE9;trica" note="" work="57600" duration="57600" start="20250517T170000Z" end="20250520T170000Z" work-start="20250519T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="94" type="FS" lag="172800"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="115" name="ENCERRAMENTO" note="" work="57600" duration="57600" start="20250520T170000Z" end="20250522T170000Z" work-start="20250520T170000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="112" type="FS"/>
+      </predecessors>
+      <task id="116" name="Atividades encerradas" note="" work="0" duration="0" start="20250520T170000Z" end="20250520T170000Z" work-start="20250520T170000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work"/>
+      <task id="117" name="Desmobilizar canteiro de obras" note="" work="57600" duration="57600" start="20250520T170000Z" end="20250522T170000Z" work-start="20250521T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="116" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="118" name="Fim do projeto" note="" work="0" duration="0" start="20250522T170000Z" end="20250522T170000Z" work-start="20250522T170000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="117" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+  </tasks>
+  <resource-groups>
+    <group id="1" name="Apoio" admin-name="Bene" admin-phone="" admin-email=""/>
+    <group id="2" name="Equip" admin-name="Bene" admin-phone="" admin-email=""/>
+    <group id="3" name="Adm" admin-name="Bene" admin-phone="" admin-email=""/>
+    <group id="4" name="Civil" admin-name="Bene" admin-phone="" admin-email=""/>
+    <group id="5" name="Hid/Ele" admin-name="Bene" admin-phone="" admin-email=""/>
+    <group id="6" name="Cliente" admin-name="Leandro GT3" admin-phone="" admin-email=""/>
+  </resource-groups>
+  <resources>
+    <resource group="3" id="1" name="Bene" short-name="Bene" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="4" id="2" name="Cezar" short-name="CZ" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="4" id="3" name="Pedreiro1" short-name="P1" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="4" id="4" name="Servente1" short-name="S1" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="4" id="5" name="Servente2" short-name="S2" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="5" id="6" name="Eletricista &amp; Hidr&#xE1;ulicista" short-name="EH1" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="3" id="7" name="Ajudante de ordem" short-name="AO" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="2" id="8" name="Munck PQ" short-name="MKP" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="2" id="9" name="Escavadeira" short-name="ESC" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="4" id="10" name="Pintor1" short-name="PT" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="5" id="11" name="Ajudante de eletricista" short-name="AJE1" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="4" id="12" name="Pedreiro2" short-name="P2" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="2" id="13" name="Moto-bomba" short-name="MB" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="4" id="14" name="mat[Concreto usinado 30mPA]" short-name="C30" type="2" units="0" email="" note="" std-rate="0"/>
+    <resource group="2" id="15" name="Gerador 3kVA" short-name="G3" type="1" units="0" email="" note="" std-rate="2500"/>
+    <resource group="6" id="16" name="Top&#xF3;grafo" short-name="TOP" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource group="4" id="17" name="mat[Carga de pedra Rach&#xE3;o [5m&#xB3;]]" short-name="P#2" type="2" units="0" email="" note="3m x 3m x 0,5m" std-rate="0"/>
+    <resource group="4" id="18" name="mat[Madeira para caixaria]" short-name="MAC" type="2" units="0" email="" note="* 4x 3m x 30cm x 3cm / &#10;* Pregos [] / &#10;* Arame recozido / " std-rate="0"/>
+    <resource group="4" id="19" name="mat[Kit Impermeabiliza&#xE7;&#xE3;o]" short-name="IMP" type="2" units="0" email="" note="* Impermeabilizante / &#10;* Rolo de pintura / &#10;* Pincel / " std-rate="0"/>
+    <resource group="2" id="20" name="mat[Guindaste]" short-name="GUI" type="2" units="0" email="" note="" std-rate="0"/>
+    <resource group="2" id="21" name="mat[Moto-compactador]" short-name="COMP" type="2" units="0" email="" note="" std-rate="0"/>
+  </resources>
+  <allocations>
+    <allocation task-id="35" resource-id="1" units="100"/>
+    <allocation task-id="19" resource-id="1" units="50"/>
+    <allocation task-id="102" resource-id="1" units="25"/>
+    <allocation task-id="13" resource-id="1" units="13"/>
+    <allocation task-id="58" resource-id="1" units="6"/>
+    <allocation task-id="27" resource-id="1" units="13"/>
+    <allocation task-id="105" resource-id="1" units="100"/>
+    <allocation task-id="106" resource-id="1" units="100"/>
+    <allocation task-id="104" resource-id="1" units="17"/>
+    <allocation task-id="22" resource-id="1" units="100"/>
+    <allocation task-id="8" resource-id="1" units="100"/>
+    <allocation task-id="84" resource-id="1" units="100"/>
+    <allocation task-id="3" resource-id="1" units="13"/>
+    <allocation task-id="23" resource-id="1" units="100"/>
+    <allocation task-id="28" resource-id="1" units="100"/>
+    <allocation task-id="59" resource-id="1" units="100"/>
+    <allocation task-id="14" resource-id="1" units="100"/>
+    <allocation task-id="91" resource-id="1" units="13"/>
+    <allocation task-id="92" resource-id="1" units="100"/>
+    <allocation task-id="86" resource-id="1" units="13"/>
+    <allocation task-id="87" resource-id="1" units="100"/>
+    <allocation task-id="98" resource-id="1" units="13"/>
+    <allocation task-id="99" resource-id="1" units="100"/>
+    <allocation task-id="6" resource-id="1" units="100"/>
+    <allocation task-id="5" resource-id="1" units="13"/>
+    <allocation task-id="18" resource-id="2" units="7"/>
+    <allocation task-id="38" resource-id="2" units="150"/>
+    <allocation task-id="33" resource-id="2" units="40"/>
+    <allocation task-id="31" resource-id="2" units="25"/>
+    <allocation task-id="81" resource-id="2" units="100"/>
+    <allocation task-id="78" resource-id="2" units="33"/>
+    <allocation task-id="77" resource-id="2" units="33"/>
+    <allocation task-id="8" resource-id="2" units="100"/>
+    <allocation task-id="32" resource-id="3" units="33"/>
+    <allocation task-id="33" resource-id="3" units="40"/>
+    <allocation task-id="78" resource-id="3" units="33"/>
+    <allocation task-id="77" resource-id="3" units="33"/>
+    <allocation task-id="76" resource-id="3" units="25"/>
+    <allocation task-id="61" resource-id="3" units="50"/>
+    <allocation task-id="8" resource-id="3" units="100"/>
+    <allocation task-id="36" resource-id="4" units="50"/>
+    <allocation task-id="41" resource-id="4" units="100"/>
+    <allocation task-id="38" resource-id="4" units="150"/>
+    <allocation task-id="29" resource-id="4" units="100"/>
+    <allocation task-id="81" resource-id="4" units="100"/>
+    <allocation task-id="77" resource-id="4" units="33"/>
+    <allocation task-id="76" resource-id="4" units="25"/>
+    <allocation task-id="61" resource-id="4" units="50"/>
+    <allocation task-id="32" resource-id="5" units="33"/>
+    <allocation task-id="41" resource-id="5" units="100"/>
+    <allocation task-id="37" resource-id="5" units="33"/>
+    <allocation task-id="33" resource-id="5" units="40"/>
+    <allocation task-id="31" resource-id="5" units="25"/>
+    <allocation task-id="78" resource-id="5" units="33"/>
+    <allocation task-id="93" resource-id="6" units="100"/>
+    <allocation task-id="111" resource-id="6" units="100"/>
+    <allocation task-id="107" resource-id="6" units="100"/>
+    <allocation task-id="81" resource-id="8" units="100"/>
+    <allocation task-id="29" resource-id="9" units="100"/>
+    <allocation task-id="31" resource-id="9" units="25"/>
+    <allocation task-id="82" resource-id="10" units="100"/>
+    <allocation task-id="93" resource-id="11" units="100"/>
+    <allocation task-id="111" resource-id="11" units="100"/>
+    <allocation task-id="107" resource-id="11" units="100"/>
+    <allocation task-id="18" resource-id="13" units="7"/>
+    <allocation task-id="33" resource-id="14" units="40"/>
+    <allocation task-id="19" resource-id="16" units="50"/>
+    <allocation task-id="31" resource-id="17" units="25"/>
+    <allocation task-id="32" resource-id="18" units="33"/>
+    <allocation task-id="37" resource-id="19" units="33"/>
+  </allocations>
+</project>
