@@ -9,6 +9,3 @@ Acesse [outro link][crono] para o mesmo local.
 
 
 [crono]:./crono202409072200R04_eee_reservadosipes.html
-
-
-teste!!!!!
